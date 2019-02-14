@@ -1,13 +1,10 @@
 <?php
-/*
+
 header('Content-Type:text/html;charset=utf-8');
 header('Access-Control-Allow-Origin:*');
-//echo $_SERVER['SERVER_NAME'];  域名
-//echo $_SERVER['REQUEST_URI'];  路径
 $url = dirname('http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI']);
 $img = '/image/';
 
-if( !empty($title) ){ // 有值
     switch ($title){
         case 'banner':
             $data = array(
@@ -33,41 +30,17 @@ if( !empty($title) ){ // 有值
                 )
             );
 
-            if( !empty($jsonp) ){  // 没有值 就为空 true
-                echo $jsonp.'('.json_encode($data).')';
-            }else{
-                echo json_encode($data);
-            }
-            break;
-    }
-}
 
+                echo json_encode($data);
+
+}
 
 
 // http://47.96.29.109/openPhp/image/banner/1.jpg
 // http://47.96.29.109/openPhp/image/banner/2.jpg
 // http://47.96.29.109/openPhp/image/banner/3.jpg
 // http://47.96.29.109/openPhp/image/banner/4.jpg
-*/
 
-
-
-header('Access-Control-Allow-Origin:*');
-
-$arr = array(
-    array(
-        'id'=>1,
-        'name'=>'追梦',
-        'age'=>18
-    ),
-    array(
-        'id'=>2,
-        'name'=>'心艾宝宝',
-        'age'=>16
-    )
-);
-
-echo json_encode($arr);
 
 
 
