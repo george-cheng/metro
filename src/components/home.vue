@@ -6,9 +6,19 @@
         <img class="home_img" :src="item.picUrl" alt="" width="100%" height="100%">
       </el-carousel-item>
     </el-carousel>
-
   </div>
-  <div class="grid"></div>
+  <div class="grid">
+    <div class="mui-content">
+      <ul class="mui-table-view mui-grid-view mui-grid-9">
+        <li v-for="" class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+          <a href="#">
+            <span class="mui-icon mui-icon-home"></span>
+            <div class="mui-media-body">Home</div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
 </template>
 
@@ -18,15 +28,16 @@ export default {
   name: 'home',
   data () {
     return {
-      imgList:[]
+      imgList:[],
+      menu:[]
     }
   },
   created() {
-    this.$ajax.get(this.dataURL('home.php'))
+    this.$ajax.get(this.dataURL('home.php','banner'))
       .then((res)=>{
         this.imgList = res.data;
-        console.log(res.data)
-      })
+      });
+
   }
 }
 </script>
@@ -52,7 +63,6 @@ export default {
     width: 590/@rem;
     height: 325/@rem;
     background-color: #ffffff;
-
   }
 </style>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
