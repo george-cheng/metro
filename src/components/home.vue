@@ -10,10 +10,9 @@
   <div class="grid">
     <div class="mui-content">
       <ul class="mui-table-view mui-grid-view mui-grid-9">
-        <li v-for="" class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+        <li v-for="item in menu" :key="item.id" class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
           <a href="#">
-            <span class="mui-icon mui-icon-home"></span>
-            <div class="mui-media-body">Home</div>
+            <img :src="item.picUrl" alt="">
           </a>
         </li>
       </ul>
@@ -37,6 +36,10 @@ export default {
       .then((res)=>{
         this.imgList = res.data;
       });
+    this.$ajax.get(this.dataURL('home.php','menu'))
+      .then((res)=>{
+        this.menu = res.data;
+      });
 
   }
 }
@@ -46,7 +49,7 @@ export default {
   @rem : 640/10rem;
   #app{
     width: 590/@rem;
-    height: 230/@rem;
+    /*height: 230/@rem;*/
     margin: 0 auto;
   }
   .banner{
@@ -63,6 +66,12 @@ export default {
     width: 590/@rem;
     height: 325/@rem;
     background-color: #ffffff;
+    .mui-grid-view.mui-grid-9{
+      background-color: #ffffff;
+    }
+    .mui-grid-view.mui-grid-9 .mui-table-view-cell{
+      border: none;
+    }
   }
 </style>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
