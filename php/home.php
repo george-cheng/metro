@@ -32,28 +32,39 @@ $data = array(
 
 $menu = array(
     array(
-        'id'=> 4,
-        'picUrl'=> $url.$meteroimg.$banner.'1.jpg'
+        'id'=> 1,
+        'picUrl'=> $url.$meteroimg.$nav.'1.jpg'
     ),
     array(
         'id'=> 2,
-        'picUrl'=> $url.$meteroimg.$banner.'2.jpg'
+        'picUrl'=> $url.$meteroimg.$nav.'2.jpg'
     ),
     array(
         'id'=> 3,
-        'picUrl'=> $url.$meteroimg.$banner.'3.jpg'
+        'picUrl'=> $url.$meteroimg.$nav.'3.jpg'
     ),
     array(
         'id'=> 4,
-        'picUrl'=> $url.$meteroimg.$banner.'4.jpg'
+        'picUrl'=> $url.$meteroimg.$nav.'4.jpg'
     ),
     array(
         'id'=> 5,
-        'picUrl'=> $url.$meteroimg.$banner.'5.jpg'
+        'picUrl'=> $url.$meteroimg.$nav.'5.jpg'
     ),
+    array(
+        'id'=> 6,
+        'picUrl'=> $url.$meteroimg.$nav.'6.jpg'
+    ),
+    array(
+        'id'=> 7,
+        'picUrl'=> $url.$meteroimg.$nav.'7.jpg'
+    ),
+    array(
+        'id'=> 8,
+        'picUrl'=> $url.$meteroimg.$nav.'8.jpg'
+    )
 );
-$param = isset($_GET['param']) ? $_GET['param'] : 'banner';
-//echo json_encode($data);
+$param = isset($_GET['title']) ? $_GET['title'] : 'banner';
 switch ($param) {
 
     case 'banner':
@@ -66,4 +77,3 @@ switch ($param) {
 }
 
 //echoData($param);
-/*http://www.berrylollipop.com/metro/php/meteroimg/1.png*/
