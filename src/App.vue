@@ -24,4 +24,7 @@
   body{
     background-color: #EFEFF4;
   }
+  ul li{
+    list-style: none;
+  }
 </style>
