@@ -36,8 +36,8 @@
 
     .mui-tab-item {
       .mui-icon {
-        width: 40/@rem;
-        height: 40/@rem;
+        width: 80/@rem;
+        height: 80/@rem;
 
         img {
           width: 100%;
