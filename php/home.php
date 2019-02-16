@@ -6,6 +6,7 @@ $url = 'http://www.berrylollipop.com/metro/php';
 $meteroimg = '/meteroimg/';
 $banner = 'banner/';
 $nav = 'nav/';
+$recommend = 'recommend/';
 
 $data = array(
     array(
@@ -64,6 +65,34 @@ $menu = array(
         'picUrl'=> $url.$meteroimg.$nav.'8.jpg'
     )
 );
+
+$recommend = array(
+    array(
+        'id'=> 1,
+        'picUrl'=> $url.$meteroimg.$recommend.'1.jpg'
+    ),
+    array(
+        'id'=> 2,
+        'picUrl'=> $url.$meteroimg.$recommend.'2.jpg'
+    ),
+    array(
+        'id'=> 3,
+        'picUrl'=> $url.$meteroimg.$recommend.'3.jpg'
+    ),
+    array(
+        'id'=> 4,
+        'picUrl'=> $url.$meteroimg.$recommend.'4.jpg'
+    ),
+    array(
+        'id'=> 5,
+        'picUrl'=> $url.$meteroimg.$recommend.'5.jpg'
+    ),
+    array(
+        'id'=> 6,
+        'picUrl'=> $url.$meteroimg.$recommend.'6.jpg'
+    )
+);
+
 $param = isset($_GET['title']) ? $_GET['title'] : 'banner';
 switch ($param) {
 
@@ -72,6 +101,9 @@ switch ($param) {
         break;
     case 'menu':
         echo json_encode($menu);
+        break;
+    case 'recommend':
+        echo json_encode($recommend);
         break;
 
 }

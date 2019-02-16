@@ -56,44 +56,6 @@ export default {
 }
 </script>
 
- Add "scoped" attribute to limit CSS to this component only -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <style lang="less" scoped>
@@ -106,38 +68,45 @@ export default {
   .banner{
     margin: 20/@rem auto 0;
     width: 590/@rem;
-    height: 230/@rem;
     .home_img{
       width: 100%;
       height: 100%;
     }
   }
   .grid{
-    margin: 50/@rem auto;
+    margin: 0/@rem auto;
     width: 590/@rem;
-    height: 325/@rem;
     background-color: #ffffff;
+    ul{
+      li{
+        width: 120/@rem;
+        height: 120/@rem;
+        a{
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
     .mui-grid-view.mui-grid-9{
       background-color: #ffffff;
       border-radius: 10/@rem;
     }
     .mui-grid-view.mui-grid-9 .mui-table-view-cell{
       border: none;
-    }
-    .grid_img{
-      width: 100%;
-      height: 100%;
+      margin-right: 26/@rem;
     }
   }
   .recommend{
     /*margin: 0 auto;*/
     ul{
-      display: flex;
+      padding-left: 0/@rem;
+
       li{
+        display: inline-block;
         width: 210/@rem;
         height: 120/@rem;
-        float: left;
-        margin-right: 25/@rem;
         img{
           width: 100%;
           height: 100%;
