@@ -49,14 +49,11 @@ export default {
     this.$ajax.get(this.dataURL('home.php','recommend'))
       .then((res)=>{
         this.recommend = res.data;
-        console.log(this.recommend);
       });
 
   }
 }
 </script>
-
-
 
 <style lang="less" scoped>
   @rem : 640/10rem;
