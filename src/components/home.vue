@@ -99,10 +99,15 @@ export default {
     }
   }
   .recommend{
-    /*margin: 0 auto;*/
+    margin-top: 35/@rem;
+    width: 100%;
+    height: 120/@rem;
+    border: 1px solid #000000;
     ul{
-      padding-left: 0/@rem;
-
+      padding-left: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+      height: 120/@rem;
       li{
         display: inline-block;
         width: 210/@rem;

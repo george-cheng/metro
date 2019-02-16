@@ -38,11 +38,13 @@
       .mui-icon {
         width: 40/@rem;
         height: 40/@rem;
+
         img {
           width: 100%;
           height: 100%;
         }
       }
+
       .mui-tab-label {
         color: #000000;
       }

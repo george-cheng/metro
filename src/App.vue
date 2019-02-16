@@ -20,8 +20,10 @@
   }
 </script>
 
-<style>
+<style lang="less">
+  @rem: 640/10rem;
   body{
+    width: 100%;
     background-color: #EFEFF4;
   }
   ul li{

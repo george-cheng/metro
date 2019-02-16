@@ -29,31 +29,36 @@
 </script>
 
 <style lang="less" scoped>
-  @rem : 640/10rem;
-  #app{
+  @rem: 640/10rem;
+  #app {
     height: 80/@rem;
     background-color: #ffffff;
     padding-top: 18/@rem;
-    .top{
+
+    .top {
       width: 590/@rem;
       height: 35/@rem;
       margin: 0 auto;
-      .lft{
+
+      .lft {
         float: left;
-        .lft_con{
+
+        .lft_con {
           width: 80/@rem;
           height: 35/@rem;
           border-radius: 40/@rem;
           display: flex;
           justify-content: space-around;
           background-color: #eeeeee;
-          .lft_con_txt{
+
+          .lft_con_txt {
             font-size: 14/@rem;
             color: #000000;
             line-height: 35/@rem;
             float: left;
           }
-          .mui-icon{
+
+          .mui-icon {
             float: right;
             width: 15/@rem;
             line-height: 35/@rem;
@@ -62,27 +67,32 @@
           }
         }
       }
-      .mid{
+
+      .mid {
         float: left;
         margin-left: 115/@rem;
         width: 200/@rem;
         height: 35/@rem;
         line-height: 35/@rem;
-        img{
+
+        img {
           width: 100%;
           height: 100%;
         }
       }
-      .rgt{
+
+      .rgt {
         float: right;
         width: 118/@rem;
         line-height: 35/@rem;
         display: flex;
         justify-content: space-around;
-        .r_rgt{
+
+        .r_rgt {
           width: 50/@rem;
           height: 35/@rem;
-          p{
+
+          p {
             font-size: 18/@rem;
             margin-bottom: 0;
             margin-top: 0;
@@ -90,22 +100,27 @@
             line-height: 18/@rem;
             white-space: nowrap;
           }
-          p:last-child{
+
+          p:last-child {
             margin-top: 2/@rem;
           }
         }
-        .r_mid{
+
+        .r_mid {
           width: 35/@rem;
           height: 35/@rem;
-          img{
+
+          img {
             width: 100%;
             height: 100%;
           }
         }
-        .r_lft{
+
+        .r_lft {
           width: 30/@rem;
           height: 35/@rem;
-          img{
+
+          img {
             width: 100%;
             height: 100%;
           }
