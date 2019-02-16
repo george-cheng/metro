@@ -100,16 +100,17 @@ export default {
   }
   .recommend{
     margin-top: 35/@rem;
-    width: 100%;
     height: 120/@rem;
-    border: 1px solid #000000;
+    overflow: hidden;
     ul{
+      width: 500%;
       padding-left: 0;
       margin-top: 0;
       margin-bottom: 0;
       height: 120/@rem;
       li{
-        display: inline-block;
+        float: left;
+        margin-right: 30/@rem;
         width: 210/@rem;
         height: 120/@rem;
         img{
