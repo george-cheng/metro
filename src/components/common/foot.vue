@@ -7,13 +7,13 @@
       <router-link :to="{name:'trip'}" class="mui-tab-item">
         <span class="mui-icon"><img src="http://www.berrylollipop.com/metro/meteroimg/tabbar/2.jpg" alt=""></span>
       </router-link>
-      <router-link :to="{}" class="mui-tab-item">
+      <router-link :to="{name:'ride'}" class="mui-tab-item">
         <span class="mui-icon"><img src="http://www.berrylollipop.com/metro/meteroimg/tabbar/5.jpg" alt=""></span>
       </router-link>
-      <router-link :to="{}" class="mui-tab-item">
+      <router-link :to="{name:'find'}" class="mui-tab-item">
         <span class="mui-icon"><img src="http://www.berrylollipop.com/metro/meteroimg/tabbar/3.jpg" alt=""></span>
       </router-link>
-      <router-link :to="{}" class="mui-tab-item" href="#">
+      <router-link :to="{name:'my'}" class="mui-tab-item">
         <span class="mui-icon"><img src="http://www.berrylollipop.com/metro/meteroimg/tabbar/4.jpg" alt=""></span>
       </router-link>
     </nav>

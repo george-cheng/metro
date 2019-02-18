@@ -3,6 +3,9 @@ import Router from 'vue-router'
 import home from '@/components/home'
 
 import trip from '../components/trip'
+import ride from '../components/ride'
+import find from '../components/find'
+import my from '../components/my'
 
 Vue.use(Router);
 
@@ -36,6 +39,21 @@ export default new Router({
       path: '/trip',
       name: 'trip',
       component: trip
+    },
+    {
+      path: '/ride',
+      name: 'ride',
+      component: ride
+    },
+    {
+      path: '/find',
+      name: 'find',
+      component: find
+    },
+    {
+      path: '/my',
+      name: 'my',
+      component: my
     }
   ]
 })
