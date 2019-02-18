@@ -28,11 +28,24 @@
     <div class="near">
       <p>附近站点</p>
       <div class="n_content">
-        <div class="top">
+
+        <div class="top_loc">
           <div class="t_lft"><p class="map_ico"><img src="../../static/icon/map.png" alt=""></p><p class="road_name">江宁路</p></div>
           <div class="t_rgt">
             <p class="p1"><img src="../../static/icon/transform.png" alt=""></p>
             <p class="p2"><img src="../../static/icon/qrcode.png" alt=""></p>
+          </div>
+        </div>
+
+        <div class="mid_line">
+          <div class="line_lft location">
+            <p class="tit">开往</p>
+            <p class="place">世博大道</p>
+          </div>
+          <div class="line_mid"></div>
+          <div class="line_rgt location">
+            <p class="tit">开往</p>
+            <p class="place">世博大道</p>
           </div>
         </div>
       </div>
@@ -77,22 +90,18 @@
     /*height: 230/@rem;*/
     margin: 0 auto;
   }
-
   .banner {
     margin: 20/@rem auto 0;
     width: 590/@rem;
-
     .home_img {
       width: 100%;
       height: 100%;
     }
   }
-
   .grid {
     margin: 0/@rem auto;
     width: 590/@rem;
     background-color: #ffffff;
-
     ul {
       li {
         width: 120/@rem;
@@ -105,19 +114,16 @@
         }
       }
     }
-
     .mui-grid-view.mui-grid-9 {
       background-color: #ffffff;
       border-radius: 10/@rem;
     }
-
     .mui-grid-view.mui-grid-9 .mui-table-view-cell {
       border: none;
       margin-right: 26/@rem;
       padding: 5px 10px;
     }
   }
-
   .recommend {
     margin-top: 35/@rem;
     height: 120/@rem;
@@ -143,20 +149,17 @@
       }
     }
   }
-
   .near {
     margin-top: 65/@rem;
-
     p {
       font-size: 30/@rem;
       color: #000;
     }
-
     .n_content {
       width: 590/@rem;
       background-color: #fff;
       border-radius: 5/@rem;
-      .top {
+      .top_loc {
         width: 550/@rem;
         margin: 20/@rem auto 0;
         height: 60/@rem;
@@ -184,7 +187,6 @@
             margin-bottom: 0;
           }
         }
-
       }
       .t_rgt {
         float: right;
@@ -198,7 +200,6 @@
             width: 100%;
             height: 100%;
           }
-
         }
         .p1 {
           display: inline-block;
