@@ -126,7 +126,6 @@
       this.$ajax.get(this.dataURL('home.php', 'info'))
         .then((res) => {
           this.info = res.data;
-          console.log(this.info);
         });
     }
   }

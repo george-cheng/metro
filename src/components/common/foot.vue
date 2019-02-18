@@ -1,16 +1,16 @@
 <template>
   <div id="app">
     <nav class="mui-bar mui-bar-tab">
-      <router-link :to="{}" class="mui-tab-item mui-active" href="#">
+      <router-link :to="{name:'home'}" class="mui-tab-item ">
         <span class="mui-icon"><img src="http://www.berrylollipop.com/metro/meteroimg/tabbar/1.jpg" alt=""></span>
       </router-link>
-      <router-link :to="{}" class="mui-tab-item" href="#">
+      <router-link :to="{name:'trip'}" class="mui-tab-item">
         <span class="mui-icon"><img src="http://www.berrylollipop.com/metro/meteroimg/tabbar/2.jpg" alt=""></span>
       </router-link>
-      <router-link :to="{}" class="mui-tab-item" href="#">
+      <router-link :to="{}" class="mui-tab-item">
         <span class="mui-icon"><img src="http://www.berrylollipop.com/metro/meteroimg/tabbar/5.jpg" alt=""></span>
       </router-link>
-      <router-link :to="{}" class="mui-tab-item" href="#">
+      <router-link :to="{}" class="mui-tab-item">
         <span class="mui-icon"><img src="http://www.berrylollipop.com/metro/meteroimg/tabbar/3.jpg" alt=""></span>
       </router-link>
       <router-link :to="{}" class="mui-tab-item" href="#">
@@ -22,12 +22,15 @@
 
 <script>
   export default {
-    name: "foot"
+    name: "foot",
+
   }
+
 </script>
 
 <style lang="less" scoped>
   @rem: 640/10rem;
+  * { touch-action: none; }
   nav {
     background-color: #fff;
     -webkit-box-shadow: none;
