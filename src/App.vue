@@ -29,4 +29,7 @@
   ul li{
     list-style: none;
   }
+  p{
+    margin-bottom: 0;
+  }
 </style>

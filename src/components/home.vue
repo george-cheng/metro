@@ -172,9 +172,10 @@
             font-size: 36/@rem;
             color: #000;
             font-weight: bold;
-            margin-bottom: 0;
             margin-left: 20/@rem;
             vertical-align: super;
+            line-height: 60/@rem;
+            margin-bottom: 0;
           }
         }
 
