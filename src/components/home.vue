@@ -42,13 +42,43 @@
             <p class="tit">开往</p>
             <p class="place">世博大道</p>
           </div>
-          <div class="line_mid"></div>
+          <div class="line_mid">
+              <p>13号线</p>
+          </div>
           <div class="line_rgt location">
             <p class="tit">开往</p>
-            <p class="place">世博大道</p>
+            <p class="place">金运路</p>
           </div>
         </div>
+
+        <div class="btm_status">
+          <div class="line_lft location">
+            <p class="tit">列车到达</p>
+            <p class="place">调试中</p>
+          </div>
+          <div class="line_mid">
+            <p>13</p>
+          </div>
+          <div class="line_rgt location">
+            <p class="tit">列车到达</p>
+            <p class="place">调试中</p>
+          </div>
+        </div>
+
+        <div class="near_info">
+          <div class="info_lft"><img src="../../static/icon/clock.png" alt=""><span>时刻表</span></div>
+          <div class="info_mid"><img src="../../static/icon/tool.png" alt=""><span>站点设施</span></div>
+          <div class="info_rgt"><img src="../../static/icon/exit.png" alt=""><span>出站信息</span></div>
+        </div>
       </div>
+    </div>
+
+    <div class="b_banner">
+      <el-carousel height="70px" indicator-position="none">
+        <el-carousel-item v-for="item in imgList" :key="item.id">
+          <img class="home_img" :src="item.picUrl" alt="" width="100%" height="100%">
+        </el-carousel-item>
+      </el-carousel>
     </div>
 
   </div>
@@ -62,7 +92,8 @@
       return {
         imgList: [],
         menu: [],
-        recommend: []
+        recommend: [],
+        info: []
       }
     },
     created() {
@@ -78,7 +109,11 @@
         .then((res) => {
           this.recommend = res.data;
         });
-
+      this.$ajax.get(this.dataURL('home.php', 'info'))
+        .then((res) => {
+          this.info = res.data;
+          console.log(this.info);
+        });
     }
   }
 </script>
@@ -156,12 +191,13 @@
       color: #000;
     }
     .n_content {
+      margin: 20/@rem auto 0;
       width: 590/@rem;
       background-color: #fff;
       border-radius: 5/@rem;
       .top_loc {
-        width: 550/@rem;
         margin: 20/@rem auto 0;
+        width: 550/@rem;
         height: 60/@rem;
         .t_lft {
           float: left;
@@ -187,33 +223,135 @@
             margin-bottom: 0;
           }
         }
-      }
-      .t_rgt {
-        float: right;
-        width: 75/@rem;
-        display: flex;
-        justify-content: space-between;
-        p {
-          margin-bottom: 0;
-          margin-top: 15/@rem;
-          img{
-            width: 100%;
-            height: 100%;
+        .t_rgt {
+          float: right;
+          width: 75/@rem;
+          display: flex;
+          justify-content: space-between;
+          p {
+            margin-bottom: 0;
+            margin-top: 15/@rem;
+            img{
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .p1 {
+            display: inline-block;
+            width: 30/@rem;
+            height: 30/@rem;
+            background-color: #8add58;
+          }
+          .p2 {
+            display: inline-block;
+            width: 30/@rem;
+            height: 30/@rem;
+            background-color: #4365f0;
           }
         }
-        .p1 {
-          display: inline-block;
-          width: 30/@rem;
-          height: 30/@rem;
-          background-color: #8add58;
+      }
+      .mid_line{
+        margin: 20/@rem auto 0;
+        width: 550/@rem;
+        display: flex;
+        justify-content: space-between;
+        .line_lft{
         }
-        .p2 {
-          display: inline-block;
-          width: 30/@rem;
-          height: 30/@rem;
-          background-color: #4365f0;
+        .line_mid{
+          margin-top: 25/@rem;
+          width: 100/@rem;
+          height: 35/@rem;
+          background-color: #ec91cc;
+          border-radius: 30/@rem;
+          vertical-align: middle;
+          p{
+            text-align: center;
+            line-height: 36/@rem;
+            font-size: 18/@rem;
+            color: #ffffff;
+          }
+        }
+        .line_rgt{
+        }
+        .location{
+          height: 100%;
+          .tit{
+            font-size: 18/@rem;
+            color: #aeaeae;
+          }
+          .place{
+            font-size: 26/@rem;
+            color: #000;
+          }
         }
       }
+      .btm_status{
+        margin: 20/@rem auto 0;
+        width: 550/@rem;
+        display: flex;
+        justify-content: space-between;
+        .line_lft{
+        }
+        .line_mid{
+          margin-top: 25/@rem;
+          width: 45/@rem;
+          height: 45/@rem;
+          background-color: #ec91cc;
+          border-radius: 50%;
+          vertical-align: middle;
+          p{
+            text-align: center;
+            line-height: 45/@rem;
+            font-size: 18/@rem;
+            color: #ffffff;
+          }
+        }
+        .line_rgt{
+        }
+        .location{
+          height: 100%;
+          .tit{
+            font-size: 18/@rem;
+            color: #aeaeae;
+          }
+          .place{
+            font-size: 26/@rem;
+            color: #000;
+          }
+        }
+      }
+      .near_info{
+        margin: 20/@rem auto 30/@rem;
+        width: 550/@rem;
+        height: 50/@rem;
+        display: flex;
+        justify-content: space-around;
+        div{
+          img{
+            width: 25/@rem;
+            height: 25/@rem;
+            vertical-align: middle;
+          }
+          span{
+            font-size: 24/@rem;
+            color: #000;
+            margin-left: 20/@rem;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+  }
+  .b_banner{
+    margin: 20/@rem auto 200/@rem;
+    width: 590/@rem;
+    height: 100/@rem;
+    .el-carousel{
+      border-radius: 100/@rem;
+    }
+    .home_img {
+      width: 100%;
+      height: 100%;
     }
   }
 </style>

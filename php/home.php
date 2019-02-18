@@ -7,6 +7,7 @@ $meteroimg = '/meteroimg/';
 $banner = 'banner/';
 $nav = 'nav/';
 $recommend = 'recommend/';
+$news = 'news/';
 
 $data = array(
     array(
@@ -93,6 +94,27 @@ $recommend = array(
     )
 );
 
+$info = array(
+    array(
+        'id'=>1,
+        'picUrl'=>$url.$meteroimg.$news.'1.jpg',
+        'info_tit'=>'站务宣传',
+        'info_txt'=>'如何赢取大都会APP限量版大红包攻略'
+    ),
+    array(
+        'id'=>2,
+        'picUrl'=>$url.$meteroimg.$news.'2.jpg',
+        'info_tit'=>'站务宣传',
+        'info_txt'=>'[1周年啦!Metro大都会刷吗过闸机]'
+    ),
+    array(
+        'id'=>3,
+        'picUrl'=>$url.$meteroimg.$news.'3.jpg',
+        'info_tit'=>'站务宣传',
+        'info_txt'=>'匆匆又一年,往事不如烟'
+    )
+);
+
 $param = isset($_GET['title']) ? $_GET['title'] : 'banner';
 switch ($param) {
 
@@ -105,7 +127,9 @@ switch ($param) {
     case 'recommend':
         echo json_encode($recommend);
         break;
+    case 'info':
+        echo json_encode($info);
+        break;
 
 }
 
-//echoData($param);
