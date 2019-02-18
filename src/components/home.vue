@@ -81,6 +81,20 @@
       </el-carousel>
     </div>
 
+    <div class="metro_info">
+      <div class="m_in_tit">
+        <p class="">地铁资讯</p>
+        <p class="more">查看更多 &nbsp;></p>
+      </div>
+      <div class="m_in_con">
+        <div v-for="item in info" :key="item.id">
+          <img :src="item.picUrl" alt="">
+          <p class="info_txt">{{item.info_txt}}</p>
+          <p class="info_tit">{{item.info_tit }}</p>
+        </div>
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -170,7 +184,6 @@
       margin-top: 0;
       margin-bottom: 0;
       height: 120/@rem;
-
       li {
         float: left;
         margin-right: 30/@rem;
@@ -189,6 +202,7 @@
     p {
       font-size: 30/@rem;
       color: #000;
+      line-height: 30/@rem;
     }
     .n_content {
       margin: 20/@rem auto 0;
@@ -336,6 +350,7 @@
             font-size: 24/@rem;
             color: #000;
             margin-left: 20/@rem;
+            line-height: 24/@rem;
             vertical-align: middle;
           }
         }
@@ -343,9 +358,8 @@
     }
   }
   .b_banner{
-    margin: 20/@rem auto 200/@rem;
+    margin: 20/@rem auto 0;
     width: 590/@rem;
-    height: 100/@rem;
     .el-carousel{
       border-radius: 100/@rem;
     }
@@ -354,4 +368,51 @@
       height: 100%;
     }
   }
+  .metro_info{
+    margin-top: 20/@rem;
+    width: 590/@rem;
+    height: 300/@rem;
+    .m_in_tit{
+      display: flex;
+      justify-content: space-between;
+      p{
+        font-size: 24/@rem;
+        color: #60605f;
+        line-height: 24/@rem;
+        font-weight: bold;
+      }
+      p.more{
+        color: #8b8b8b;
+        font-weight: normal;
+      }
+    }
+    .m_in_con{
+      margin-top: 35/@rem;
+      margin-bottom: 120/@rem;
+      div{
+        img{
+          width: 100%;
+          height: 100%;
+        }
+        .info_txt{
+          margin-top: 18/@rem;
+          font-size: 30/@rem;
+          line-height: 30/@rem;
+          color: #000;
+        }
+        .info_tit{
+          margin-top: 20/@rem;
+          margin-bottom: 60/@rem;
+          width: 120/@rem;
+          height: 30/@rem;
+          background-color: #ef9692;
+          border-radius: 30/@rem;
+          text-align: center;
+          line-height: 30/@rem;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
 </style>
