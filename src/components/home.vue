@@ -29,9 +29,11 @@
       <p>附近站点</p>
       <div class="n_content">
         <div class="top">
-          <div class="t_lft"><p class="map_ico"></p><p class="road_name">江宁路</p></div>
-          <div class="t_rgt"><p class="p1"></p>
-            <p class="p2"></p></div>
+          <div class="t_lft"><p class="map_ico"><img src="../../static/icon/map.png" alt=""></p><p class="road_name">江宁路</p></div>
+          <div class="t_rgt">
+            <p class="p1"><img src="../../static/icon/transform.png" alt=""></p>
+            <p class="p2"><img src="../../static/icon/qrcode.png" alt=""></p>
+          </div>
         </div>
       </div>
     </div>
@@ -95,7 +97,6 @@
       li {
         width: 120/@rem;
         height: 120/@rem;
-
         a {
           img {
             width: 100%;
@@ -113,6 +114,7 @@
     .mui-grid-view.mui-grid-9 .mui-table-view-cell {
       border: none;
       margin-right: 26/@rem;
+      padding: 5px 10px;
     }
   }
 
@@ -162,10 +164,14 @@
           float: left;
           .map_ico {
             display: inline-block;
-            width: 60/@rem;
-            height: 60/@rem;
-            background-color: #5158a2;
+            width: 50/@rem;
+            height: 50/@rem;
             margin-bottom: 0;
+            line-height: 60/@rem;
+            img{
+              width: 100%;
+              height: 100%;
+            }
           }
           .road_name {
             display: inline-block;
@@ -188,6 +194,11 @@
         p {
           margin-bottom: 0;
           margin-top: 15/@rem;
+          img{
+            width: 100%;
+            height: 100%;
+          }
+
         }
         .p1 {
           display: inline-block;

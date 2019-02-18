@@ -15,8 +15,8 @@
           <p>多云</p>
           <p>8℃</p>
         </div>
-        <div class="r_mid"><img src="http://www.berrylollipop.com/metro/meteroimg/home/cloud.png" alt=""></div>
-        <div class="r_lft"><img src="http://www.berrylollipop.com/metro/meteroimg/home/ling.png" alt=""></div>
+        <div class="r_mid"><img src="../../../static/icon/cloud.png" alt=""></div>
+        <div class="r_lft"><img src="../../../static/icon/ling.png" alt=""></div>
       </div>
     </div>
   </div>
