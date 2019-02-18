@@ -268,6 +268,7 @@
         width: 550/@rem;
         display: flex;
         justify-content: space-between;
+        -webkit-justify-content: space-between;
         .line_lft{
         }
         .line_mid{
@@ -303,6 +304,7 @@
         width: 550/@rem;
         display: flex;
         justify-content: space-between;
+        -webkit-justify-content: space-between;
         .line_lft{
         }
         .line_mid{
@@ -339,6 +341,7 @@
         height: 50/@rem;
         display: flex;
         justify-content: space-around;
+        -webkit-justify-content: space-between;
         div{
           img{
             width: 25/@rem;
@@ -374,6 +377,7 @@
     .m_in_tit{
       display: flex;
       justify-content: space-between;
+      -webkit-justify-content: space-between;
       p{
         font-size: 24/@rem;
         color: #60605f;
