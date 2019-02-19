@@ -9,17 +9,28 @@ import '../static/mui/css/mui.css'
 
 import Element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-Vue.use(Element);
 
 import less from 'less'
-Vue.use(less);
 
 import '../static/js/fontSize'
 
+import VueAMap from 'vue-amap'
+
+Vue.use(VueAMap);
+VueAMap.initAMapApiLoader({
+  key: 'ef032521d06f45eb6a771e328f3559d6',
+  plugin: ['AMap.Autocomplete','AMap.PlaceSearch', 'AMap.Scale', 'AMap.OverView', 'AMap.ToolBar', 'AMap.MapType', 'AMap.PolyEditor', 'AMap.CircleEditor'],
+  // 默认高德 sdk 版本为 1.4.4
+  v: '1.4.4'
+});
+
+
+Vue.use(Element);
+
+Vue.use(less);
+
 Vue.config.productionTip = false;
 
-
-/* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,

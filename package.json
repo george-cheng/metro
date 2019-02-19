@@ -10,12 +10,14 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "amap": "^1.0.7",
     "axios": "^0.18.0",
     "element-ui": "^2.5.4",
     "jquery": "^3.3.1",
     "less": "^3.9.0",
     "mui": "^0.0.1",
     "vue": "^2.5.2",
+    "vue-amap": "^0.5.8",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
