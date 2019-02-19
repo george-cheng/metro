@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-
+    <metor></metor>
+  <div class="box">
     <div class="banner">
       <el-carousel height="150px" indicator-position="outside">
         <el-carousel-item v-for="item in imgList" :key="item.id">
@@ -94,14 +95,16 @@
         </div>
       </div>
     </div>
-
+  </div>
   </div>
 </template>
 
 <script>
+  import metor from './common/metro_header'
 
-  export default {
+export default {
     name: 'home',
+
     data() {
       return {
         imgList: [],
@@ -110,6 +113,11 @@
         info: []
       }
     },
+
+  components: {
+    'metor':metor
+  },
+
     created() {
       this.$ajax.get(this.dataURL('home.php', 'banner'))
         .then((res) => {
@@ -134,12 +142,18 @@
 <style lang="less" scoped>
   @rem: 640/10rem;
   #app {
-    width: 590/@rem;
+    width: 640/@rem;
     /*height: 230/@rem;*/
+    /*margin: 0 auto;*/
+    margin-top: 100/@rem;
+    margin: 0 auto;
+  }
+  .box{
+    width: 590/@rem;
     margin: 0 auto;
   }
   .banner {
-    margin: 20/@rem auto 0;
+    margin: 100/@rem auto 0;
     width: 590/@rem;
     .home_img {
       width: 100%;

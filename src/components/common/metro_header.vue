@@ -31,14 +31,17 @@
 <style lang="less" scoped>
   @rem: 640/10rem;
   #app {
+    width: 640/@rem;
     height: 80/@rem;
     background-color: #ffffff;
     padding-top: 18/@rem;
-
+    position: fixed;
+    z-index: 99999;
+    margin: -100/@rem 0 0 0;
     .top {
-      width: 590/@rem;
+      /*margin: 0 auto;*/
+      width: 640/@rem;
       height: 35/@rem;
-      margin: 0 auto;
 
       .lft {
         float: left;
