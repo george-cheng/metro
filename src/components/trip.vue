@@ -73,9 +73,11 @@
 <style lang="less" scoped>
   @rem :640/10rem;
   #app{
-    width: 100%;
+    margin: 0 auto;
+    width: 640/@rem;
     height: 100%;
     overflow: hidden;
+    position: relative;
     .amap-demo {
       margin: 0 auto;
       width: 640/@rem;
@@ -86,10 +88,28 @@
       height: 70/@rem;
       background-color: #f60;
       position: fixed;
-      right: 50/@rem;
-      margin: auto;
       bottom: 590/@rem;
+      margin-left: 400/@rem;
+      margin-right: 50/@rem;
       border-radius: 10/@rem;
+      .re_txt{
+        float: left;
+        width: 150/@rem;
+        height: 40/@rem;
+        line-height: 70/@rem;
+        background-color: #eec1bc;
+        text-align: center;
+        border-radius: 30/@rem;
+        p{
+          font-size: 24/@rem;
+          color: #b44c4d;
+          text-align: center;
+          line-height: 40/@rem;
+        }
+      }
+      /*.re_count{
+        float: right;
+      }*/
     }
     .my_pos{
       width: 590/@rem;
