@@ -1,10 +1,9 @@
 <template>
-  <div class="amap-container">
-    <el-amap ref="map" vid="amapDemo" :amap-manager="amapManager" :center="center" :zoom="zoom" :plugin="plugin" :events="events" class="amap-demo">
-    </el-amap>
-
+  <div id="app">
+    <div class="amap-container">
+      <el-amap ref="map" vid="amapDemo" :amap-manager="amapManager" :center="center" :zoom="zoom" :plugin="plugin" :events="events" class="amap-demo"></el-amap>
+    </div>
   </div>
-
 </template>
 
 <script>
@@ -15,13 +14,14 @@
     data(){
       let self = this;
       return{
+
+        amapManager,
         position:{
           lng:'',
           lat:'',
           address:'',
           loaded:false
         },
-        amapManager,
         zoom: 14,
         count:1,
         touchZoom:true,
@@ -36,14 +36,13 @@
           scrollWheel:true,
           'zoomchange': () => {
             console.log(1);
-          },
+          }
 
         },
         plugin: ['ToolBar',{
           defaultType: 0,
           events: {
             init(instance){
-              instance.log
             },
             init(o) {
 
@@ -52,20 +51,24 @@
         }],
         scrollWheel:true,
         zoomEnable:true,
+        dragEnable:true,
         // zoom:14,
         center: [113.631766,34.740485],
       }
-
-    },
-    methods: {
-
     }
   }
 </script>
 
 <style lang="less" scoped>
   @rem :640/10rem;
+  #app{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
   .amap-demo {
-    height: 300px;
+    margin: 0 auto;
+    width: 640/@rem;
+    height: 1280/@rem;
   }
 </style>
