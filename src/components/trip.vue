@@ -3,6 +3,17 @@
     <div class="amap-container">
       <el-amap ref="map" vid="amapDemo" :amap-manager="amapManager" :center="center" :zoom="zoom" :plugin="plugin" :events="events" class="amap-demo"></el-amap>
     </div>
+    <div class="remind">
+      <div class="re_txt">
+        <p>出行提醒</p>
+      </div>
+      <div class="re_count">
+        <img src="../../static/icon/trip/count.png" alt="">
+      </div>
+    </div>
+    <div class="my_pos">
+
+    </div>
   </div>
 </template>
 
@@ -65,10 +76,31 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-  }
-  .amap-demo {
-    margin: 0 auto;
-    width: 640/@rem;
-    height: 1280/@rem;
+    .amap-demo {
+      margin: 0 auto;
+      width: 640/@rem;
+      height: 1280/@rem;
+    }
+    .remind{
+      width: 210/@rem;
+      height: 70/@rem;
+      background-color: #f60;
+      position: fixed;
+      right: 50/@rem;
+      margin: auto;
+      bottom: 590/@rem;
+      border-radius: 10/@rem;
+    }
+    .my_pos{
+      width: 590/@rem;
+      height: 270/@rem;
+      background-color: #ffffff;
+      position: fixed;
+      right: 25/@rem;
+      left: 25/@rem;
+      margin: auto;
+      bottom: 300/@rem;
+      border-radius: 10/@rem;
+    }
   }
 </style>
