@@ -107,9 +107,9 @@
           line-height: 40/@rem;
         }
       }
-      /*.re_count{
+      .re_count{
         float: right;
-      }*/
+      }
     }
     .my_pos{
       width: 590/@rem;
