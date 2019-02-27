@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <div class="amap-container">
-      <el-amap ref="map" vid="amapDemo" :amap-manager="amapManager" :center="center" :zoom="zoom" :plugin="plugin" :events="events" class="amap-demo"></el-amap>
+      <el-amap ref="map" vid="amapDemo" :amap-manager="amapManager" :center="center" :zoom="zoom" :plugin="plugin"
+               :events="events" class="amap-demo"></el-amap>
     </div>
     <div class="remind">
       <div class="re_txt">
@@ -16,13 +17,13 @@
         <div class="my_pos_box_ipt">
           <div class="my_position position">
             <label for="">
-              <span class="spot"></span>
+              <span class="spot" style="background-color: #17be6c;"></span>
               <input type="text" placeholder="我的位置">
             </label>
           </div>
           <div class="set_position position">
             <label for="">
-              <span class="spot"></span>
+              <span class="spot" style="background-color: #f02830;"></span>
               <input type="text" placeholder="设置终点">
             </label>
           </div>
@@ -32,7 +33,21 @@
         </div>
       </div>
       <div class="my_pos_btm">
-
+        <ul>
+          <li>
+            <img src="../../static/icon/trip/home.png" alt="">
+            <span>家</span>
+          </li>
+          <li>
+            <img src="../../static/icon/trip/company.png" alt="">
+            <span>去公司</span>
+          </li>
+          <li>
+            <div class="search" >
+              <a href="#">搜索</a>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -40,23 +55,24 @@
 
 <script>
   import VueAMap from 'vue-amap'
+
   let amapManager = new VueAMap.AMapManager();
   export default {
     name: "trip",
-    data(){
+    data() {
       let self = this;
-      return{
+      return {
 
         amapManager,
-        position:{
-          lng:'',
-          lat:'',
-          address:'',
-          loaded:false
+        position: {
+          lng: '',
+          lat: '',
+          address: '',
+          loaded: false
         },
         zoom: 14,
-        count:1,
-        touchZoom:true,
+        count: 1,
+        touchZoom: true,
         slotStyle: {
           padding: '2px 8px',
           background: '#eee',
@@ -64,47 +80,49 @@
           border: '1px solid #aaa'
         },
         events: {
-          zoomEnable:true,
-          scrollWheel:true,
+          zoomEnable: true,
+          scrollWheel: true,
           'zoomchange': () => {
             console.log(1);
           }
 
         },
-        plugin: ['ToolBar',{
+        plugin: ['ToolBar', {
           defaultType: 0,
           events: {
-            init(instance){
+            init(instance) {
             },
             init(o) {
 
             }
           }
         }],
-        scrollWheel:true,
-        zoomEnable:true,
-        dragEnable:true,
+        scrollWheel: true,
+        zoomEnable: true,
+        dragEnable: true,
         // zoom:14,
-        center: [113.631766,34.740485],
+        center: [113.631766, 34.740485],
       }
     }
   }
 </script>
 
 <style lang="less" scoped>
-  @rem :750/10rem;
-  #app{
+  @rem: 750/10rem;
+  #app {
     margin: 0 auto;
     width: 750/@rem;
     height: 100%;
     overflow: hidden;
     position: relative;
+
     .amap-demo {
       margin: 0 auto;
       width: 750/@rem;
       height: 1280/@rem;
     }
-    .remind{
+
+    .remind {
       width: 210/@rem;
       height: 70/@rem;
       position: fixed;
@@ -112,7 +130,8 @@
       margin-left: 510/@rem;
       margin-right: 50/@rem;
       border-radius: 10/@rem;
-      .re_txt{
+
+      .re_txt {
         display: inline-block;
         margin: 15/@rem 0;
         float: left;
@@ -122,14 +141,16 @@
         background-color: #eec1bc;
         text-align: center;
         border-radius: 30/@rem;
-        p{
+
+        p {
           font-size: 24/@rem;
           color: #b44c4d;
           text-align: center;
           line-height: 50/@rem;
         }
       }
-      .re_count{
+
+      .re_count {
         display: inline-block;
         float: right;
         width: 70/@rem;
@@ -141,13 +162,15 @@
         position: absolute;
         z-index: 999;
         right: 5/@rem;
-        img{
+
+        img {
           width: 40/@rem;
           height: 40/@rem;
         }
       }
     }
-    .my_pos{
+
+    .my_pos {
       width: 690/@rem;
       height: 270/@rem;
       background-color: #ffffff;
@@ -156,23 +179,25 @@
       left: 25/@rem;
       margin: auto;
       bottom: 300/@rem;
-      border-radius: 10/@rem;
-      .my_pos_box{
+      border-radius: 15/@rem;
+
+      .my_pos_box {
         margin: 40/@rem 0 0 50/@rem;
-        .my_pos_box_ipt{
-          .position{
+
+        .my_pos_box_ipt {
+          .position {
             height: 70/@rem;
-            label{
-              span.spot{
+
+            label {
+              span.spot {
                 display: inline-block;
                 width: 18/@rem;
                 height: 18/@rem;
-                background-color: #f60;
                 border-radius: 50%;
                 margin-right: 30/@rem;
               }
 
-              input{
+              input {
                 margin-bottom: 0;
                 padding: 0;
                 border: none;
@@ -185,16 +210,56 @@
             }
           }
         }
-        .my_pos_box_tran{
+
+        .my_pos_box_tran {
           float: right;
           width: 165/@rem;
           height: 140/@rem;
           margin-top: -135/@rem;
           text-align: center;
           line-height: 140/@rem;
-          img{
-            width: 80%;
-            height: 80%;
+
+          img {
+            width: 50%;
+            height: 50%;
+          }
+        }
+      }
+      .my_pos_btm{
+        height: 88/@rem;
+        width: 100%;
+        line-height: 88/@rem;
+        ul{
+          width: 100%;
+          display: flex;
+          justify-content: space-around;
+          -webkit-justify-content: space-around;
+          margin: 0;
+          padding: 0;
+          li{
+            img{
+              width: 32/@rem;
+              height: 32/@rem;
+              vertical-align: middle;
+            }
+            span{
+              font-size: 24/@rem;
+              line-height: 24/@rem;
+            }
+            .search{
+              width: 160/@rem;
+              height: 55/@rem;
+              background-color: #565da5;
+              border-radius: 40/@rem;
+              line-height: 55/@rem;
+              text-align: center;
+              margin: 15/@rem 0;
+              a{
+                color: #ffffff;
+                font-size: 34/@rem;
+                line-height: 34/@rem;
+              }
+            }
           }
         }
       }
