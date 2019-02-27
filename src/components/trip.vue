@@ -12,7 +12,25 @@
       </div>
     </div>
     <div class="my_pos">
+      <div class="my_pos_box">
+        <div class="my_pos_box_ipt">
+          <div class="my_position position">
+            <label for="">
+              <span class="spot"></span>
+              <input type="text" placeholder="我的位置">
+            </label>
+          </div>
+          <div class="set_position position">
+            <label for="">
+              <span class="spot"></span>
+              <input type="text" placeholder="设置终点">
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="my_pos_btm">
 
+      </div>
     </div>
   </div>
 </template>
@@ -71,28 +89,29 @@
 </script>
 
 <style lang="less" scoped>
-  @rem :640/10rem;
+  @rem :750/10rem;
   #app{
     margin: 0 auto;
-    width: 640/@rem;
+    width: 750/@rem;
     height: 100%;
     overflow: hidden;
     position: relative;
     .amap-demo {
       margin: 0 auto;
-      width: 640/@rem;
+      width: 750/@rem;
       height: 1280/@rem;
     }
     .remind{
       width: 210/@rem;
       height: 70/@rem;
-      background-color: #f60;
       position: fixed;
       bottom: 590/@rem;
-      margin-left: 400/@rem;
+      margin-left: 510/@rem;
       margin-right: 50/@rem;
       border-radius: 10/@rem;
       .re_txt{
+        display: inline-block;
+        margin: 15/@rem 0;
         float: left;
         width: 150/@rem;
         height: 40/@rem;
@@ -104,15 +123,29 @@
           font-size: 24/@rem;
           color: #b44c4d;
           text-align: center;
-          line-height: 40/@rem;
+          line-height: 50/@rem;
         }
       }
       .re_count{
+        display: inline-block;
         float: right;
+        width: 70/@rem;
+        height: 70/@rem;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 70/@rem;
+        background-color: #fff;
+        position: absolute;
+        z-index: 999;
+        right: 5/@rem;
+        img{
+          width: 40/@rem;
+          height: 40/@rem;
+        }
       }
     }
     .my_pos{
-      width: 590/@rem;
+      width: 690/@rem;
       height: 270/@rem;
       background-color: #ffffff;
       position: fixed;
@@ -121,6 +154,33 @@
       margin: auto;
       bottom: 300/@rem;
       border-radius: 10/@rem;
+      .my_pos_box{
+        margin: 40/@rem 0 0 50/@rem;
+        width: 470/@rem;
+        height: 145/@rem;
+        .my_pos_box_ipt{
+          .position{
+            height: 70/@rem;
+            label{
+
+              span.spot{
+                display: inline-block;
+                width: 18/@rem;
+                height: 18/@rem;
+                background-color: #f60;
+                border-radius: 50%;
+                margin-right: 30/@rem;
+              }
+              input{
+                display: inline-block;
+                height: 70/@rem;
+                width: 405/@rem;
+                border-bottom: 1px solid #dcdcdc;
+              }
+            }
+          }
+        }
+      }
     }
   }
 </style>

@@ -29,4 +29,10 @@
   p{
     margin-bottom: 0;
   }
+  input[type='text']{
+    margin-bottom: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+  }
 </style>
