@@ -27,6 +27,9 @@
             </label>
           </div>
         </div>
+        <div class="my_pos_box_tran">
+          <img src="../../static/icon/trip/transform.png" alt="">
+        </div>
       </div>
       <div class="my_pos_btm">
 
@@ -156,13 +159,10 @@
       border-radius: 10/@rem;
       .my_pos_box{
         margin: 40/@rem 0 0 50/@rem;
-        width: 470/@rem;
-        height: 145/@rem;
         .my_pos_box_ipt{
           .position{
             height: 70/@rem;
             label{
-
               span.spot{
                 display: inline-block;
                 width: 18/@rem;
@@ -171,13 +171,30 @@
                 border-radius: 50%;
                 margin-right: 30/@rem;
               }
+
               input{
+                margin-bottom: 0;
+                padding: 0;
+                border: none;
+                border-radius: 0;
                 display: inline-block;
                 height: 70/@rem;
                 width: 405/@rem;
                 border-bottom: 1px solid #dcdcdc;
               }
             }
+          }
+        }
+        .my_pos_box_tran{
+          float: right;
+          width: 165/@rem;
+          height: 140/@rem;
+          margin-top: -135/@rem;
+          text-align: center;
+          line-height: 140/@rem;
+          img{
+            width: 80%;
+            height: 80%;
           }
         }
       }
