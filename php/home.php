@@ -8,6 +8,8 @@ $banner = 'banner/';
 $nav = 'nav/';
 $recommend = 'recommend/';
 $news = 'news/';
+$icon = 'icon/';
+$trip = 'trip/';
 
 $data = array(
     array(
@@ -115,6 +117,29 @@ $info = array(
     )
 );
 
+$trip_icon = array(
+    array(
+        'id'=>1,
+        'picUrl'=>$url.$meteroimg.$icon.$trip.'line.png',
+        'trip_tit'=>'线路列表'
+    ),
+    array(
+        'id'=>2,
+        'picUrl'=>$url.$meteroimg.$icon.$trip.'station.png',
+        'trip_tit'=>'车站信息'
+    ),
+    array(
+        'id'=>3,
+        'picUrl'=>$url.$meteroimg.$icon.$trip.'apology.png',
+        'trip_tit'=>'致歉信'
+    ),
+    array(
+        'id'=>4,
+        'picUrl'=>$url.$meteroimg.$icon.$trip.'toilet.png',
+        'trip_tit'=>'卫生间'
+    )
+);
+
 $param = isset($_GET['title']) ? $_GET['title'] : 'banner';
 switch ($param) {
 
@@ -129,6 +154,9 @@ switch ($param) {
         break;
     case 'info':
         echo json_encode($info);
+        break;
+    case 'trip_icon':
+        echo json_encode($trip_icon);
         break;
 
 }
