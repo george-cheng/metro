@@ -49,6 +49,14 @@
           </li>
         </ul>
       </div>
+      <div class="my_pos_btm_info">
+        <ul>
+          <li v-for="item in trip_icon" :key="item.id">
+            <img :src="item.picUrl" alt="">
+            <span>{{item.trip_tit}}</span>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -62,6 +70,7 @@
     data() {
       let self = this;
       return {
+        trip_icon:[],
 
         amapManager,
         position: {
@@ -103,6 +112,13 @@
         // zoom:14,
         center: [113.631766, 34.740485],
       }
+    },
+    created() {
+      this.$ajax.get(this.dataURL('home.php','trip_icon'))
+        .then((res)=>{
+          this.trip_icon = res.data;
+          console.log(res.data);
+        })
     }
   }
 </script>
@@ -120,6 +136,8 @@
       margin: 0 auto;
       width: 750/@rem;
       height: 1280/@rem;
+      position: fixed;
+      z-index: -7;
     }
 
     .remind {
@@ -261,6 +279,16 @@
               }
             }
           }
+        }
+      }
+      .my_pos_btm_info{
+        margin-top: 30/@rem;
+        width: 690@rem;
+        height: 155/@rem;
+        background-color: #fff;
+        ul{
+          display: flex;
+          flex: 1;
         }
       }
     }
