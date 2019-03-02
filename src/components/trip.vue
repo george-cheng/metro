@@ -49,14 +49,14 @@
           </li>
         </ul>
       </div>
-      <div class="my_pos_btm_info">
-        <ul>
-          <li v-for="item in trip_icon" :key="item.id">
-            <img :src="item.picUrl" alt="">
-            <span>{{item.trip_tit}}</span>
-          </li>
-        </ul>
-      </div>
+    </div>
+    <div class="my_pos_btm_info">
+      <ul>
+        <li v-for="item in trip_icon" :key="item.id">
+          <img :src="item.picUrl" alt="">
+          <p>{{item.trip_tit}}</p>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -269,7 +269,7 @@
               height: 55/@rem;
               background-color: #565da5;
               border-radius: 40/@rem;
-              line-height: 55/@rem;
+              line-height: 45/@rem;
               text-align: center;
               margin: 15/@rem 0;
               a{
@@ -281,14 +281,38 @@
           }
         }
       }
-      .my_pos_btm_info{
-        margin-top: 30/@rem;
-        width: 690@rem;
-        height: 155/@rem;
-        background-color: #fff;
-        ul{
-          display: flex;
-          flex: 1;
+
+    }
+    .my_pos_btm_info{
+      width: 690/@rem;
+      background-color: #ffffff;
+      position: fixed;
+      right: 25/@rem;
+      left: 25/@rem;
+      margin: auto;
+      bottom: 120/@rem;
+      border-radius: 15/@rem;
+      ul{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex: 1;
+        justify-content: space-around;
+        -webkit-justify-content: space-around;
+        margin: 10/@rem 0;
+        li{
+          text-align: center;
+          img{
+            width: 50%;
+            height: auto;
+          }
+          p{
+            margin-top: 20/@rem;
+            font-size: 24/@rem;
+            line-height: 24/@rem;
+            color: #000;
+            text-align: center;
+          }
         }
       }
     }
