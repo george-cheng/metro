@@ -36,6 +36,8 @@
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
+    position: fixed;
+    z-index: 9999999999;
 
     .mui-tab-item {
       .mui-icon {
