@@ -128,14 +128,14 @@
   #app {
     margin: 0 auto;
     width: 750/@rem;
-    height: 100%;
+    height: 1500/@rem;
     overflow: hidden;
     position: relative;
 
     .amap-demo {
       margin: 0 auto;
       width: 750/@rem;
-      height: 1280/@rem;
+      height: 1500/@rem;
       position: fixed;
       z-index: -7;
     }
