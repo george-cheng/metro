@@ -117,7 +117,6 @@
       this.$ajax.get(this.dataURL('home.php','trip_icon'))
         .then((res)=>{
           this.trip_icon = res.data;
-          console.log(res.data);
         })
     }
   }
